@@ -1,0 +1,166 @@
+//media
+
+@mixin min-screen($res) {
+  @media only screen and (min-width: $res) {
+    @content
+  }
+}
+
+@include min-screen(768px) {
+  .custom-navbar {
+    @include vertical-center(15px);
+  }
+  .allbg {
+    .bg1, .bg2, .bg3, .bg4, .bg5 {
+      background-position: 86% 0;
+    }
+  }
+  .second{
+    .fa{
+      display: inline-block;
+    }
+  }
+  #second-container {
+    position: relative;
+    padding-top: 147px;
+    padding-top: 15vh;
+    padding-bottom: 49px;
+    padding-bottom: 5vh;
+  }
+  .second.title {
+    margin-bottom: 40px;
+    h1 {
+      font-size: 40px;
+      margin: {
+        top: 10px;
+        bottom: 10px;
+      }
+    }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+  }
+  .second-row {
+    margin: 0 50px;
+    overflow: hidden;
+  }
+  .second.area {
+    margin-bottom: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    img:first-child {
+      display: block;
+    }
+    img:last-child {
+      display: none;
+    }
+    .txt {
+      top: 36%;
+      bottom: initial;
+    }
+  }
+  .second-page .three-line {
+    margin-top: 5vh;
+    margin-bottom: 20px;
+    button {
+      margin-top: 5vh;
+      width: 320px;
+      height: 62px;
+      border: 1px solid #f08080;
+      background-color: #fff;
+      color: #f08080;
+      font-size: 26px;
+      line-height: 26px;
+      border-radius: 6px;
+      position: static;
+    }
+  }
+  // last-three-page
+  .web-lazy-index {
+    .third-page {
+      background-image: url("../img/bg-third.jpg");
+    }
+    .fourth-page{
+      background-image: url("../img/bg-fourth.jpg");
+    }
+    .fifth-page{
+      background-image: url("../img/bg-fifth.jpg");
+    }
+  }
+
+  .page-3 {
+    h1 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      white-space: nowrap;
+      color: #fff;
+      span {
+        font-weight: lighter;
+      }
+    }
+    h5 {
+      margin-top: 0;
+      font-weight: 400;
+      font-size: 18px;
+      color: #fff;
+    }
+    h6 {
+      margin-top: 35px;
+      font-size: 18px;
+      color: #fff;
+      a {
+        color: #fff;
+        @include transition-all(0.3s);
+      }
+    }
+    .section-bottom {
+      position: absolute;
+      bottom: 0;
+      padding: 15px 0;
+      margin-bottom: 0;
+      background-color: rgba(0, 0, 0, .3);
+      width: 100%;
+      color: #fff;
+      font-size: 20px;
+      .border-lr {
+        border: {
+          left: 1px solid #fff;
+          right: 1px solid #fff;
+        }
+      }
+    }
+    .content {
+      margin-top: 30vh;
+    }
+    .img {
+      display: none;
+    }
+    .text-right{
+      padding-right: 40px;
+    }
+  }
+
+  // fp-footer
+
+}
+
+@include min-screen(992px) {
+  .second.area {
+    h1 {
+      font-size: 20px;
+    }
+  }
+}
+
+@include min-screen(1200px) {
+  .container-my {
+    width: 1200px;
+  }
+  .second.area {
+    h1 {
+      font-size: 26px;
+    }
+  }
+}
