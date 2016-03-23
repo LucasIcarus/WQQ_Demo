@@ -8,10 +8,6 @@
 node_modules*
 
 
-#grunt
-Gruntfile.js
-
-
 # Created by https://www.gitignore.io/api/ode,webstorm,windows
 
 #!! ERROR: ode is undefined. Use list command to see defined gitignore types !!#
