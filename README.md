@@ -15,7 +15,7 @@
 
 ----
 
-#### Then I haven't received any feedback from WQQ, tragicly.
+#### Then I haven't received any feedback even a logo image from WQQ, tragicly.
 
 #### I rewrite the demo structure at 24.3.2016, Hope today is not the end of the story.
 
