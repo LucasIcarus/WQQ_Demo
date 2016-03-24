@@ -12,7 +12,7 @@ module.exports = function (grunt) {
                 files: [
                     {expand: true, cwd: 'css', src: '**.min.css', dest: 'dist/css', filter: 'isFile'},
                     {expand: true, cwd: 'js', src: '**.min.js', dest: 'dist/js', filter: 'isFile'},
-                    {expand: true, cwd: 'img_build', src: '**.*', dest: 'dist/img_build', filter: 'isFile'},
+                    {expand: true, cwd: 'img', src: '**.*', dest: 'dist/img', filter: 'isFile'},
                 ]
             }
         },
@@ -63,9 +63,9 @@ module.exports = function (grunt) {
             main: {
                 files: [{
                     expand: true,
-                    cwd: 'img',
+                    cwd: 'img_untreated',
                     src: ['**/*.{png,jpg,gif,jpeg}'],
-                    dest: 'img_build'
+                    dest: 'img'
                 }]
             }
         },
@@ -105,16 +105,15 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    // grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
     // custom task(s)
     grunt.registerTask(
         'build',
         'release to the dist',
-        ['usebanner','uglify','sass:minified','imagemin','htmlmin','copy']
+        ['sass:minified','uglify','usebanner','imagemin','htmlmin','copy']
     );
 
     // default task(s)
-    grunt.registerTask('default', ['copy']);
+    grunt.registerTask('default', ['imagemin']);
 };

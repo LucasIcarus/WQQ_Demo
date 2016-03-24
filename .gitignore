@@ -7,6 +7,9 @@
 #npm
 node_modules*
 
+#SASS
+.sass-cache*
+
 
 # Created by https://www.gitignore.io/api/ode,webstorm,windows
 
